@@ -50,6 +50,8 @@ Donde:
   * $(x, y)$ son las coordenadas del punto proyectado en el plano de la imagen.
   * $f$ es la **distancia focal** de la cámara.
 
+![Figura 1: Calibración](Fig 1 Calibrate.png)
+
 
 
 
