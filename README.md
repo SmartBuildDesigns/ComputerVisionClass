@@ -50,7 +50,11 @@ Donde:
   * $(x, y)$ son las coordenadas del punto proyectado en el plano de la imagen.
   * $f$ es la **distancia focal** de la cámara.
 
-![Figura 1: Calibración](Fig1_Calibrate.png)
+<figure>
+  <img src="Fig1_Calibrate.png" alt="Texto alternativo" />
+  <figcaption>$Q$ es el punto $(X,Y,Z) en el mundo real, $q$ es el punto $(x,y)$ en el plano de la imagen y $f$ es la distancia focal.</figcaption>
+</figure>
+
 
 
 
