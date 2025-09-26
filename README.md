@@ -34,7 +34,7 @@ Antes de poder medir distancias, reconstruir una escena en 3D o interactuar con 
 
 <figure>
   <img src="Fig2_Calibrate.png" alt="Fig1." />
-  <figcaption> Q es el punto (X,Y,Z) en el mundo real, q es el punto (x,y) en el plano de la imagen y f es la distancia focal.</figcaption>
+  <figcaption> Fig.1 Ejemplos de distorsiones del lente. </figcaption>
 </figure>
 
 ### El Modelo Matemático: Puntos, Píxeles y Matrices
@@ -57,7 +57,7 @@ Donde:
 
 <figure>
   <img src="Fig1_Calibrate.png" alt="Fig2." />
-  <figcaption> Q es el punto (X,Y,Z) en el mundo real, q es el punto (x,y) en el plano de la imagen y f es la distancia focal.</figcaption>
+  <figcaption> Fig.2 Q es el punto (X,Y,Z) en el mundo real, q es el punto (x,y) en el plano de la imagen y f es la distancia focal.</figcaption>
 </figure>
 
 
