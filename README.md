@@ -186,10 +186,11 @@ pip install opencv-python numpy
 ```
 #### Paso 2: Recolectar las Imágenes del Tablero
 
-1.  Imprime un patrón de tablero de ajedrez.
+1.  Imprime un patrón de tablero de ajedrez. Aqui puedes descargar un ejemplo. [Aqui.](checkerboardPattern.pdf)
 2.  Toma entre 15-20 fotos del tablero desde diferentes ángulos. Asegúrate de que el tablero llene diferentes partes de la vista de la cámara.
 3.  Guarda todas las imágenes en una carpeta.
 
+#### Paso 3: Código de Calibración y Corrección
 
 
 
