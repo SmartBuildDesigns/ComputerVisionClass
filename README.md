@@ -138,7 +138,15 @@ Y + T_y \\
 
 El resultado, $(X + T_x, Y + T_y, 1)$, es el nuevo punto en coordenadas homogéneas. Al convertirlo de vuelta a cartesianas, obtenemos $(X + T_x, Y + T_y)$, que es exactamente el resultado que queríamos.
 
+### El Punto en el Infinito
 
+Una propiedad interesante de las coordenadas homogéneas es que nos permiten representar el concepto de "puntos en el infinito". Si el valor de `w` es 0, al intentar convertir de vuelta a coordenadas cartesianas, tendríamos que dividir por cero.
+
+$$(x, y, 0) \rightarrow (\infty, \infty)$$
+
+Esto es muy útil en gráficos por computadora y visión por computadora para representar la dirección de los rayos de luz o líneas paralelas que "se encuentran" en el infinito.
+
+En resumen, las coordenadas homogéneas son un sistema que, **al añadir una dimensión `w`**, nos permite **unificar todas las transformaciones geométricas en una sola operación de multiplicación de matrices**, lo cual es computacionalmente muy eficiente.
 
 
 
