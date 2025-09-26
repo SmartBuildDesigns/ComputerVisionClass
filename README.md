@@ -601,9 +601,6 @@ print("\nVisualización 3D de las poses del tablero (cámara fija) completada.")
 2.  **Corrección de la Distorsión de la Lente:**
     * Las lentes reales introducen distorsiones (principalmente radiales y tangenciales) que curvan las líneas rectas y alteran la percepción de la geometría. La calibración nos permite cuantificar estas distorsiones mediante los coeficientes de distorsión (`dist`).
     * La visualización de la imagen original vs. la corregida, con las líneas del tablero, ilustra de forma contundente cómo la calibración "endereza" el mundo, transformando las líneas curvas en segmentos rectos, lo que es vital para una representación fiel de la realidad.
-    * http://googleusercontent.com/image_generation_content/0
-
-
 
 3.  **Determinación de los Parámetros Intrínsecos (`K`):**
     * La matriz intrínseca (`mtx`) de la cámara encapsula sus propiedades internas, como la distancia focal efectiva (`fx`, `fy`) y el punto principal (`cx`, `cy`). Estos parámetros son únicos para cada cámara y lente.
@@ -612,10 +609,6 @@ print("\nVisualización 3D de las poses del tablero (cámara fija) completada.")
 4.  **Estimación de la Pose Relativa (Parámetros Extrínsecos):**
     * La calibración no solo nos da los parámetros intrínsecos y de distorsión, sino que también nos proporciona los parámetros extrínsecos (`rvecs` y `tvecs`) para cada imagen utilizada. Estos describen la rotación y traslación de la cámara con respecto al objeto de calibración (el tablero).
     * La visualización 3D interactiva nos permitió ver las diferentes poses del tablero en relación con la cámara fija. Esto no solo ayuda a entender los datos de calibración, sino que también valida la diversidad de las capturas, crucial para una calibración robusta.
-
-    * http://googleusercontent.com/image_generation_content/1
-
-
 
 5.  **Importancia de la Adquisición de Datos:**
     * La calidad de la calibración depende directamente de la calidad y variedad de las imágenes del tablero. Múltiples tomas desde diversos ángulos, distancias y orientaciones son esenciales para que el algoritmo de calibración pueda "ver" y modelar con precisión las distorsiones de toda la lente.
