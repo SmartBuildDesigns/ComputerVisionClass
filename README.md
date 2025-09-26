@@ -168,6 +168,29 @@ Aquí es donde abandonamos el mundo ideal. Las lentes reales, especialmente las 
 
 El objetivo final de la calibración es encontrar los valores precisos de la **matriz intrínseca (K)** y los **cinco coeficientes de distorsión $(k\_1, k\_2, k\_3, p\_1, p\_2)$**.
 
+### El Proceso Práctico con un Tablero de Ajedrez ♟️
+
+Para encontrar todos estos parámetros, necesitamos un objeto cuya geometría conozcamos a la perfección. Un **tablero de ajedrez** es ideal porque es plano y sus esquinas internas forman una cuadrícula perfectamente regular.
+
+El proceso consiste en mostrarle a la cámara el tablero desde múltiples ángulos y distancias. OpenCV utiliza estas múltiples vistas para resolver el sistema de ecuaciones y encontrar los parámetros de la cámara.
+
+### Tutorial Práctico en Código
+
+Aquí está el flujo completo para calibrar tu cámara.
+
+#### Paso 1: Preparación del Entorno
+
+Instala la paqueteria necesaria para calibrar la cámara.
+```bash
+pip install opencv-python numpy
+```
+#### Paso 2: Recolectar las Imágenes del Tablero
+
+1.  Imprime un patrón de tablero de ajedrez.
+2.  Toma entre 15-20 fotos del tablero desde diferentes ángulos. Asegúrate de que el tablero llene diferentes partes de la vista de la cámara.
+3.  Guarda todas las imágenes en una carpeta.
+
+
 
 
 
