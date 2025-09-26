@@ -593,6 +593,43 @@ print("\nVisualización 3D de las poses del tablero (cámara fija) completada.")
   <figcaption> Fig.6 Ejemplo de la correción de la distorsión.</figcaption>
 </figure>
 
+## Conclusiones 
+
+1.  **La Calibración es Fundamental para la Percepción Geométrica Precisa:**
+    * Hemos demostrado que la calibración de una cámara no es un paso opcional, sino esencial para cualquier aplicación de visión por computadora que requiera mediciones precisas, reconstrucción 3D o comprensión espacial del entorno. Sin ella, la cámara es solo un sensor de luz; con ella, se convierte en un instrumento de medición.
+
+2.  **Corrección de la Distorsión de la Lente:**
+    * Las lentes reales introducen distorsiones (principalmente radiales y tangenciales) que curvan las líneas rectas y alteran la percepción de la geometría. La calibración nos permite cuantificar estas distorsiones mediante los coeficientes de distorsión (`dist`).
+    * La visualización de la imagen original vs. la corregida, con las líneas del tablero, ilustra de forma contundente cómo la calibración "endereza" el mundo, transformando las líneas curvas en segmentos rectos, lo que es vital para una representación fiel de la realidad.
+    * http://googleusercontent.com/image_generation_content/0
+
+
+
+3.  **Determinación de los Parámetros Intrínsecos (`K`):**
+    * La matriz intrínseca (`mtx`) de la cámara encapsula sus propiedades internas, como la distancia focal efectiva (`fx`, `fy`) y el punto principal (`cx`, `cy`). Estos parámetros son únicos para cada cámara y lente.
+    * Conociendo `K`, podemos traducir las coordenadas de píxeles a rayos 3D en el espacio de la cámara, un paso fundamental para la triangulación y la reconstrucción 3D.
+
+4.  **Estimación de la Pose Relativa (Parámetros Extrínsecos):**
+    * La calibración no solo nos da los parámetros intrínsecos y de distorsión, sino que también nos proporciona los parámetros extrínsecos (`rvecs` y `tvecs`) para cada imagen utilizada. Estos describen la rotación y traslación de la cámara con respecto al objeto de calibración (el tablero).
+    * La visualización 3D interactiva nos permitió ver las diferentes poses del tablero en relación con la cámara fija. Esto no solo ayuda a entender los datos de calibración, sino que también valida la diversidad de las capturas, crucial para una calibración robusta.
+
+    * http://googleusercontent.com/image_generation_content/1
+
+
+
+5.  **Importancia de la Adquisición de Datos:**
+    * La calidad de la calibración depende directamente de la calidad y variedad de las imágenes del tablero. Múltiples tomas desde diversos ángulos, distancias y orientaciones son esenciales para que el algoritmo de calibración pueda "ver" y modelar con precisión las distorsiones de toda la lente.
+    * El script de adquisición automática basado en movimiento es una herramienta valiosa para asegurar esta diversidad en los datos de entrada, minimizando la redundancia y maximizando la eficiencia.
+
+6.  **Base para Aplicaciones Avanzadas:**
+    * Una cámara calibrada es el punto de partida para una multitud de aplicaciones avanzadas de visión por computadora:
+        * **Reconstrucción 3D:** Construir modelos 3D de objetos o entornos.
+        * **Realidad Aumentada (AR):** Superponer objetos virtuales de forma realista en el mundo real.
+        * **Robótica:** Permitir que los robots perciban su entorno con precisión para navegación y manipulación.
+        * **Metrología:** Realizar mediciones exactas de objetos en imágenes.
+        * **Visión Estéreo:** Calibrar múltiples cámaras para percibir la profundidad.
+
+En resumen, la calibración de cámara transforma un dispositivo de captura de luz en un sensor geométrico preciso. Este proceso, aunque matemático, es fundamental para "enseñar a ver" a las máquinas de una manera que les permita entender y medir el mundo físico con la fidelidad necesaria para tareas complejas.
 
 
 
