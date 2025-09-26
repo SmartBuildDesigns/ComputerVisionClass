@@ -79,6 +79,69 @@ Z_{cam}
   * **$f\_x, f\_y$ (Distancia Focal en píxeles):** El "zoom" de la lente, pero medido en unidades de píxeles en los ejes X e Y. Es la combinación de la distancia focal física y el tamaño de los píxeles en el sensor.
   * **$c\_x, c\_y$ (Punto Principal):** El verdadero centro óptico de la imagen. Es el punto en píxeles donde el eje óptico de la lente intersecta el sensor. Rara vez coincide con el centro exacto de la imagen.
 
+Antes de continuar vamos a explicar más a detalle que son las coordenadas homogéneas.
+
+Son una maneobra matemática que nos permite simplificar las operaciones geométricas, como las traslaciones, rotaciones y cambios de escala, representándolas todas como una única operación: la multiplicación de matrices.
+
+## ¿Cual es el problema de las coordenadas cartesianas?
+
+En un sistema de coordenadas cartesianas normal (el que usamos habitualmente con ejes X, Y, Z), algunas operaciones geométricas son más complicadas que otras.
+
+* Una **rotación** se puede expresar como una multiplicación de matrices.
+* Un **cambio de escala** (escalado) también se puede expresar como una multiplicación de matrices.
+* Una **traslación** (mover un objeto sin rotarlo) se expresa como una **suma** de vectores.
+
+Este "problema" de tener que combinar sumas y multiplicaciones es inconveniente para las computadoras, especialmente para el hardware gráfico (GPUs) que está optimizado para realizar multiplicaciones de matrices de forma masiva y muy rápida.
+
+## ¿Cuál es la solución?: Añadir una dimensión extra
+
+Las coordenadas homogéneas resuelven este problema añadiendo una dimensión extra a nuestros puntos, tradicionalmente llamada **w**.
+
+* Un punto **2D** $(X, Y)$ se convierte en $(x, y, w)$.
+* Un punto **3D** $(X, Y, Z)$ se convierte en $(x, y, z, w)$.
+
+Para convertir de coordenadas cartesianas a homogéneas, simplemente añadimos un 1 en la nueva coordenada `w`:
+
+* $(X, Y) \rightarrow (X, Y, 1)$
+* $(X, Y, Z) \rightarrow (X, Y, Z, 1)$
+
+Para convertir de vuelta de homogéneas a cartesianas, dividimos todas las coordenadas por `w` y descartamos la última componente:
+
+* $(x, y, w) \rightarrow (x/w, y/w)$
+* $(x, y, z, w) \rightarrow (x/w, y/w, z/w)$
+
+### ¿Por qué funciona esto?
+
+Al añadir esta dimensión extra, todas las transformaciones geométricas (incluida la traslación) se pueden expresar como una única multiplicación de matrices.
+
+**Ejemplo: Traslación en 2D**
+
+Imagina que quieres mover el punto $(X, Y)$ una distancia de $(T_x, T_y)$.
+
+* **En coordenadas cartesianas:** $(X_{nuevo}, Y_{nuevo}) = (X + T_x, Y + T_y)$ (una suma).
+* **En coordenadas homogéneas:** Representamos la traslación con una matriz y el punto como un vector. La operación se convierte en una multiplicación:
+
+$$
+\begin{pmatrix} 
+1 & 0 & T_x \\ 
+0 & 1 & T_y \\ 
+0 & 0 & 1 
+\end{pmatrix}
+\begin{pmatrix} 
+X \\
+Y \\
+1 
+\end{pmatrix}
+=
+\begin{pmatrix} 
+X + T_x \\
+Y + T_y \\
+1 
+\end{pmatrix}
+$$
+
+El resultado, $(X + T_x, Y + T_y, 1)$, es el nuevo punto en coordenadas homogéneas. Al convertirlo de vuelta a cartesianas, obtenemos $(X + T_x, Y + T_y)$, que es exactamente el resultado que queríamos.
+
 
 
 
