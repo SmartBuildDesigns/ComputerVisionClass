@@ -121,8 +121,7 @@ Imagina que quieres mover el punto $(X, Y)$ una distancia de $(T_x, T_y)$.
 * **En coordenadas cartesianas:** $(X_{nuevo}, Y_{nuevo}) = (X + T_x, Y + T_y)$ (una suma).
 * **En coordenadas homogéneas:** Representamos la traslación con una matriz y el punto como un vector. La operación se convierte en una multiplicación.
 
-$$
-\begin{pmatrix} 
+$$\begin{pmatrix} 
 1 & 0 & T_x \\ 
 0 & 1 & T_y \\
 0 & 0 & 1 
@@ -135,12 +134,12 @@ Y \\
 \end{pmatrix}
 
 =
+
 \begin{pmatrix} 
 X + T_x \\
 Y + T_y \\
 1 
-\end{pmatrix}
-$$
+\end{pmatrix}$$
 
 
 El resultado, $(X + T_x, Y + T_y, 1)$, es el nuevo punto en coordenadas homogéneas. Al convertirlo de vuelta a cartesianas, obtenemos $(X + T_x, Y + T_y)$, que es exactamente el resultado que queríamos.
