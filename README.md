@@ -32,6 +32,11 @@ Calibrar una cámara es como **"graduarle la vista"**. Por la forma de sus lente
 
 Antes de poder medir distancias, reconstruir una escena en 3D o interactuar con el mundo, una cámara necesita entender su propia geometría. Calibrar una cámara es el proceso de descubrir sus características internas para traducir los píxeles de una imagen a mediciones fiables del mundo real.
 
+<figure>
+  <img src="Fig2_Calibrate.png" alt="Fig1." />
+  <figcaption> Q es el punto (X,Y,Z) en el mundo real, q es el punto (x,y) en el plano de la imagen y f es la distancia focal.</figcaption>
+</figure>
+
 ### El Modelo Matemático: Puntos, Píxeles y Matrices
 
 Para corregir las imperfecciones, primero necesitamos un modelo matemático que describa cómo una cámara ideal debería funcionar.
@@ -51,9 +56,11 @@ Donde:
   * $f$ es la **distancia focal** de la cámara.
 
 <figure>
-  <img src="Fig1_Calibrate.png" alt="Fig1." />
-  <figcaption> Q es el punto (X,Y,Z) en el mundo real, q es el punto (x,y) en el plano de la imagen y $f$ es la distancia focal.</figcaption>
+  <img src="Fig1_Calibrate.png" alt="Fig2." />
+  <figcaption> Q es el punto (X,Y,Z) en el mundo real, q es el punto (x,y) en el plano de la imagen y f es la distancia focal.</figcaption>
 </figure>
+
+
 
 
 
