@@ -67,7 +67,14 @@ Podemos expresar esta proyección de forma matricial usando **coordenadas homog�
 $$\begin{pmatrix} 
 x_{pixel} \\
 y_{pixel} \\ 
-1 \end{pmatrix} = \begin{pmatrix} f_x & 0 & c_x \\ 0 & f_y & c_y \\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} X_{cam} \\ Y_{cam} \\ Z_{cam} \end{pmatrix}$$
+1 \end{pmatrix} = \begin{pmatrix} 
+f_x & 0 & c_x \\
+0 & f_y & c_y \\ 
+0 & 0 & 1 \end{pmatrix} 
+\begin{pmatrix} X_{cam} \\
+Y_{cam} \\ 
+Z_{cam} 
+\end{pmatrix}$$
 
   * **$f\_x, f\_y$ (Distancia Focal en píxeles):** El "zoom" de la lente, pero medido en unidades de píxeles en los ejes X e Y. Es la combinación de la distancia focal física y el tamaño de los píxeles en el sensor.
   * **$c\_x, c\_y$ (Punto Principal):** El verdadero centro óptico de la imagen. Es el punto en píxeles donde el eje óptico de la lente intersecta el sensor. Rara vez coincide con el centro exacto de la imagen.
