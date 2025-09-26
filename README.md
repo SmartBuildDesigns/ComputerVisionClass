@@ -6,22 +6,6 @@ El objetivo es desmitificar el campo de la CV y darte las herramientas para que 
 
 -----
 
-## Índice del Curso
-
-1.  **Fundamentos Esenciales**
-      * ¿Qué es una imagen para una computadora? (Píxeles, Canales, Resolución)
-2.  **Procesamiento de Imágenes**
-      * **Calibración de Cámara: Corrigiendo la Visión del Mundo**
-      * Operaciones con Píxeles: Brillo, Contraste y Colores
-      * Filtros y Convoluciones: Suavizado, Detección de Bordes y Enfoque
-3.  **Análisis y Detección**
-      * Segmentación de Imágenes: Encontrando lo que nos interesa
-      * Detección y Seguimiento de Objetos
-4.  **Deep Learning Aplicado a Visión**
-      * Introducción a las Redes Neuronales Convolucionales (CNNs)
-      * Clasificación de Imágenes
-      * Detección de Objetos con Modelos Pre-entrenados (YOLO, SSD)
-
 -----
 
 ## Calibración de Cámara: Corrigiendo la Visión del Mundo 📸📏
