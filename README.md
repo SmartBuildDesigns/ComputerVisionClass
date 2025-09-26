@@ -143,6 +143,31 @@ La matriz intrínseca traduce puntos desde el sistema de coordenadas 3D *de la c
 
 Juntos, nos permiten transformar un punto del mundo real $(X\_w, Y\_w, Z\_w)$ al sistema de coordenadas de la cámara $(X\_c, Y\_c, Z\_c)$.
 
+#### Distorsiones del Lente
+
+Aquí es donde abandonamos el mundo ideal. Las lentes reales, especialmente las más económicas ver Figura 3, no son perfectas e introducen distorsiones. Las principales son:
+
+<figure>
+  <img src="Fig3_Calibrate.png" alt="Fig3." />
+  <figcaption> Fig.3 Ejemplo de como son las lentes económicas. </figcaption>
+</figure>
+
+1.  **Distorsión Radial:** Ocurre porque la lente curva más los rayos de luz en los bordes que en el centro. Esto causa el famoso efecto "ojo de pez" o de "barril". Se modela con una serie de coeficientes $(k\_1, k\_2, k\_3)$.
+
+<figure>
+  <img src="Fig4_Calibrate.png" alt="Fig4." />
+  <figcaption> Fig.4 Ejemplo de distorsión radial.</figcaption>
+</figure>
+
+2.  **Distorsión Tangencial:** Ocurre si la lente no está perfectamente paralela al sensor de la cámara. Se modela con dos coeficientes $(p\_1, p\_2)$.
+
+<figure>
+  <img src="Fig5_Calibrate.png" alt="Fig5." />
+  <figcaption> Fig.5 Ejemplo de distorsión tangencial.</figcaption>
+</figure>
+
+El objetivo final de la calibración es encontrar los valores precisos de la **matriz intrínseca (K)** y los **cinco coeficientes de distorsión $(k\_1, k\_2, k\_3, p\_1, p\_2)$**.
+
 
 
 
