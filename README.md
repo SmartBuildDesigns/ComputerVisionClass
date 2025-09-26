@@ -182,7 +182,10 @@ Aquí está el flujo completo para calibrar tu cámara.
 
 Instala la paqueteria necesaria para calibrar la cámara.
 ```bash
-pip install opencv-python numpy
+pip install opencv-python numpy 
+```
+```bash
+pip install matplotlib
 ```
 #### Paso 2: Recolectar las Imágenes del Tablero
 
@@ -193,6 +196,13 @@ pip install opencv-python numpy
 #### Paso 3: Código de Adquisición automática
 
 Visualiza el código de adquisición. [ver adquisicion2D.py](adquisicion2D.py)
+
+* El siguiente código busca y controla la cámara conectada a la computadora.
+* Despliega la imagen de video
+* Busca el tablero (Hay que establecer correctamente las columnas y filas del tablero para que lo detecte)
+* Mueve el tablero y empieza a capturar las imagenes y guardarlas. (Calibralo con los milimetros de movimiento entre mas alto los milimetros menor sensibilidad en el movimiento)
+* Presiona "q" y finaliza.
+
 ```python
 import cv2
 import numpy as np
@@ -333,6 +343,12 @@ print(f"\nAdquisición de imágenes finalizada. Total de imágenes guardadas: {i
 #### Paso 3: Calibración y corrección de distorsión.
 
 Visualiza el código de calibración y correción [ver calibracion.py](calib.py)
+
+* Lee las imagenes guardadas de la adquisición.
+* Calibra la cámara. (Mide el tamaño de un cuadrado del tablero y anotalo en MM)
+* Realiza la correción de la distorsión.
+* Muestra la posición de la cámara y el tablero en un espacio en 3 dimensiones.
+
 ```python
 import cv2
 import numpy as np
