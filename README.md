@@ -11,7 +11,7 @@ El objetivo es desmitificar el campo de la CV y darte las herramientas para que 
 1.  **Fundamentos Esenciales**
       * ¿Qué es una imagen para una computadora? (Píxeles, Canales, Resolución)
 2.  **Procesamiento de Imágenes**
-      * **Calibración de Cámara: Corrigiendo la Visión del Mundo** 👈 **(Estás aquí)**
+      * **Calibración de Cámara: Corrigiendo la Visión del Mundo**
       * Operaciones con Píxeles: Brillo, Contraste y Colores
       * Filtros y Convoluciones: Suavizado, Detección de Bordes y Enfoque
 3.  **Análisis y Detección**
