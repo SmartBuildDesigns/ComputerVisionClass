@@ -125,17 +125,11 @@ $$\begin{pmatrix}
 1 & 0 & T_x \\ 
 0 & 1 & T_y \\
 0 & 0 & 1 
-\end{pmatrix}
-
-\begin{pmatrix}
+\end{pmatrix} \begin{pmatrix}
 X \\
 Y \\
 1 
-\end{pmatrix}
-
-=
-
-\begin{pmatrix} 
+\end{pmatrix} = \begin{pmatrix} 
 X + T_x \\
 Y + T_y \\
 1 
