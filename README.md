@@ -122,10 +122,24 @@ Imagina que quieres mover el punto $(X, Y)$ una distancia de $(T_x, T_y)$.
 * **En coordenadas homogéneas:** Representamos la traslación con una matriz y el punto como un vector. La operación se convierte en una multiplicación.
 
 $$
-\begin{pmatrix} 1 & 0 & T_x \\ 0 & 1 & T_y \\ 0 & 0 & 1 \end{pmatrix}
-\begin{pmatrix} X \\ Y \\ 1 \end{pmatrix}
+\begin{pmatrix} 
+1 & 0 & T_x \\ 
+0 & 1 & T_y \\
+0 & 0 & 1 
+\end{pmatrix}
+
+\begin{pmatrix}
+X \\
+Y \\
+1 
+\end{pmatrix}
+
 =
-\begin{pmatrix} X + T_x \\ Y + T_y \\ 1 \end{pmatrix}
+\begin{pmatrix} 
+X + T_x \\
+Y + T_y \\
+1 
+\end{pmatrix}
 $$
 
 
