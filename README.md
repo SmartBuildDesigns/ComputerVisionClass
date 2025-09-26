@@ -81,7 +81,7 @@ Z_{cam}
 
 Antes de continuar vamos a explicar más a detalle que son las coordenadas homogéneas.
 
-Son una maneobra matemática que nos permite simplificar las operaciones geométricas, como las traslaciones, rotaciones y cambios de escala, representándolas todas como una única operación: la multiplicación de matrices.
+Son una maniobra matemática que nos permite simplificar las operaciones geométricas, como las traslaciones, rotaciones y cambios de escala, representándolas todas como una única operación: la multiplicación de matrices.
 
 ## ¿Cual es el problema de las coordenadas cartesianas?
 
@@ -147,6 +147,21 @@ $$(x, y, 0) \rightarrow (\infty, \infty)$$
 Esto es muy útil en gráficos por computadora y visión por computadora para representar la dirección de los rayos de luz o líneas paralelas que "se encuentran" en el infinito.
 
 En resumen, las coordenadas homogéneas son un sistema que, **al añadir una dimensión `w`**, nos permite **unificar todas las transformaciones geométricas en una sola operación de multiplicación de matrices**, lo cual es computacionalmente muy eficiente.
+
+Ahora si continuemos con el proceso de calibración.
+
+#### Parámetros Extrínsecos (R y T)
+
+La matriz intrínseca traduce puntos desde el sistema de coordenadas 3D *de la cámara* a la imagen 2D. Pero, ¿dónde está la cámara en el mundo? Los **parámetros extrínsecos** describen su posición y orientación en el espacio. Consisten en:
+
+  * Una **matriz de rotación (R)** de 3x3 que define la orientación de la cámara.
+  * Un **vector de traslación (T)** de 3x1 que define su posición.
+
+Juntos, nos permiten transformar un punto del mundo real $(X\_w, Y\_w, Z\_w)$ al sistema de coordenadas de la cámara $(X\_c, Y\_c, Z\_c)$.
+
+
+
+
 
 
 
