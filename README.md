@@ -190,11 +190,18 @@ pip install opencv-python numpy
 2.  Toma entre 15-20 fotos del tablero desde diferentes ángulos. Asegúrate de que el tablero llene diferentes partes de la vista de la cámara.
 3.  Guarda todas las imágenes en una carpeta.
 
-#### Paso 3: Código de Calibración y Corrección
+#### Paso 3: Código de Adquisición automática
 
+Visualiza el código de adquisición. [ver adquisicion2D.py](adquisicion2D.py)
 
+#### Paso 3: Calibración y corrección de distorsión.
 
+Visualiza el código de calibración y correción [ver calibracion.py](calib.py)
 
+<figure>
+  <img src="resultado_corregido_ejemplo_con_puntos.png" alt="Fig6." />
+  <figcaption> Fig.6 Ejemplo de la correción de la distorsión.</figcaption>
+</figure>
 
 
 
