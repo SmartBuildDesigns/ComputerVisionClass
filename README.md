@@ -224,13 +224,12 @@ MOVEMENT_THRESHOLD_MM = 1 # 10 mm = 1 cm de cambio en la posición
 MIN_TIME_BETWEEN_CAPTURES_SEC = 1.0 # Mínimo tiempo en segundos entre capturas automáticas
 
 # --- 3. CONFIGURAR LA ADQUISICIÓN DE VIDEO ---
-cap = cv2.VideoCapture(0) # '0' para la cámara predeterminada (tu Logitech C922)
-
+cap = cv2.VideoCapture(0) # '0'
 if not cap.isOpened():
     print("Error: No se pudo abrir la cámara. Asegúrate de que esté conectada y no en uso.")
     exit()
 
-# Establecer resolución (opcional, tu C922 soporta varias)
+# Establecer resolución
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280) # Ejemplo de resolución
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720) # Ejemplo de resolución
 print(f"Resolución actual de la cámara: {int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))}x{int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))}")
